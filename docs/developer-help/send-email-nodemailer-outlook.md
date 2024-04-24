@@ -1,6 +1,10 @@
 ---
 sidebar_position: 6
 title: "Send Email - Nodemailer"
+description: A short description of this page
+# image: a thumbnail image to be shown in social media cards
+keywords: [keywords, describing, the main topics]
+
 ---
 
 # Send Email with Nodemailer Using Microsoft Outlook in Node.js
@@ -19,7 +23,7 @@ Before we start, make sure you have the following:
 
 Let's create a new Node.js project if you don't have one already.
 
-```bash
+```jsx
 mkdir nodemailer-outlook
 cd nodemailer-outlook
 npm init -y
@@ -30,7 +34,7 @@ npm init -y
 
 Next, let's install Nodemailer, which we'll use to send emails.
 
-```bash
+```jsx
 npm install nodemailer
 ```
 Nodemailer will now be part of your Node.js project.
@@ -41,7 +45,7 @@ Nodemailer uses SMTP (Simple Mail Transfer Protocol) to send emails. To connect 
 
 Here's a simple code snippet to create a Nodemailer transporter for Outlook:
 
-```bash
+```jsx
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
@@ -62,7 +66,7 @@ ow let's create a function that sends an email. This function will take some bas
 
 Here's a simple code snippet to create a Nodemailer transporter for Outlook:
 
-```bash
+```jsx
 async function sendEmail(to, subject, html) {
   try {
     const mailOptions = {
@@ -86,7 +90,7 @@ With the 'sendEmail' function ready, let's test it by sending a simple email wit
 
 Here's a simple code snippet to create a Nodemailer transporter for Outlook:
 
-```bash
+```jsx
 sendEmail('recipient@example.com', 'Test Email', '<h1>Hello World!</h1><p>This is a test email.</p>');
 ```
 Replace 'recipient@example.com' with the email address to which you want to send the email.
@@ -95,7 +99,7 @@ Replace 'recipient@example.com' with the email address to which you want to send
 ## Bonus Section: Sending Emails with Attachments and CC
 Nodemailer allows you to send emails with attachments and CC (carbon copy). Let's modify our "sendEmail" function to include these features.
 
-```bash
+```jsx
 const path = require('path');
 
 async function sendEmailWithAttachment(to, cc, subject, htmlContent, attachmentFilename) {
